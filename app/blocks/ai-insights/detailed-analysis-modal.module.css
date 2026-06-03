@@ -1,0 +1,15 @@
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; display: flex; align-items: center; justify-content: center; padding: var(--space-6); }
+.modal { background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-6); border-bottom: 1px solid var(--color-border); }
+.title { font-size: 16px; font-weight: 700; color: var(--color-text); }
+.closeBtn { background: none; border: none; cursor: pointer; color: var(--color-text-muted); }
+.body { padding: var(--space-6); }
+.rec { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6); }
+.badge { padding: 6px 16px; border-radius: var(--radius-full); font-size: 16px; font-weight: 800; }
+.SELL { background: var(--color-danger-bg); color: var(--color-danger); }
+.HOLD { background: var(--color-warning-bg); color: var(--color-warning); }
+.BUY { background: var(--color-success-bg); color: var(--color-success); }
+.target { font-family: var(--family-mono); font-size: 1.2rem; font-weight: 700; color: var(--color-primary); }
+.section { margin-bottom: var(--space-5); }
+.sectionLabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-subtle); margin-bottom: var(--space-2); }
+.reasoning { font-size: 14px; color: var(--color-text-muted); line-height: 1.7; }

@@ -1,0 +1,14 @@
+.wrap { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; margin-bottom: var(--space-6); }
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; min-width: 900px; }
+.th { padding: var(--space-3) var(--space-4); text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-subtle); border-bottom: 1px solid var(--color-border); background: var(--color-bg-surface); white-space: nowrap; }
+.td { padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); white-space: nowrap; }
+.tr:last-child .td { border-bottom: none; }
+.tr:hover .td { background: var(--color-bg-hover); }
+.nameLink { color: var(--color-text); font-weight: 600; text-decoration: none; }
+.nameLink:hover { color: var(--color-primary); }
+.sku { font-family: var(--family-mono); font-size: 11px; color: var(--color-text-subtle); }
+.priceCell { font-family: var(--family-mono); font-weight: 700; }
+.profit { color: var(--color-success); }
+.loss { color: var(--color-danger); }
+.bestBadge { display: inline-flex; padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 700; background: var(--color-primary-glow); color: var(--color-primary); border: 1px solid rgba(0,255,136,0.2); margin-left: var(--space-1); }

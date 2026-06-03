@@ -1,0 +1,9 @@
+.header { display: flex; align-items: flex-start; gap: var(--space-6); margin-bottom: var(--space-6); background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-6); }
+.image { width: 120px; height: 120px; border-radius: var(--radius-md); background: var(--color-bg-elevated); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--color-text-subtle); font-size: 12px; }
+.info { flex: 1; }
+.sku { font-family: var(--family-mono); font-size: 12px; color: var(--color-primary); margin-bottom: var(--space-2); }
+.name { font-size: 1.4rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2); }
+.meta { display: flex; gap: var(--space-4); font-size: 13px; color: var(--color-text-muted); }
+.actions { display: flex; gap: var(--space-3); }
+.editBtn { padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; background: var(--color-primary); color: var(--color-text-inverse); border: none; cursor: pointer; }
+.deleteBtn { padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; background: none; border: 1px solid var(--color-danger); color: var(--color-danger); cursor: pointer; }

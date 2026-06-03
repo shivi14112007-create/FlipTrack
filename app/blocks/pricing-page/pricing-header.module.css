@@ -1,0 +1,4 @@
+.header { padding: var(--space-20) var(--space-6) var(--space-8); text-align: center; }
+.inner { max-width: 600px; margin: 0 auto; }
+.heading { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--color-text); margin-bottom: var(--space-3); }
+.sub { color: var(--color-text-muted); font-size: 17px; }

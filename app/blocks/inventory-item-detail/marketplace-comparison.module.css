@@ -1,0 +1,8 @@
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-6); }
+.title { font-size: 14px; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-5); }
+.table { width: 100%; border-collapse: collapse; }
+.th { padding: var(--space-3) var(--space-4); text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-subtle); border-bottom: 1px solid var(--color-border); }
+.td { padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); }
+.td:last-child { border-bottom: none; }
+.mono { font-family: var(--family-mono); font-weight: 700; color: var(--color-text); }
+.bestBadge { display: inline-flex; padding: 2px 8px; border-radius: var(--radius-full); font-size: 10px; font-weight: 700; background: var(--color-primary-glow); color: var(--color-primary); border: 1px solid rgba(0,255,136,0.2); }

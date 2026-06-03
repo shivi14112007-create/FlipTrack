@@ -1,0 +1,11 @@
+.section { padding: var(--space-16) var(--space-6); background: var(--color-bg-surface); border-top: 1px solid var(--color-border); }
+.inner { max-width: 900px; margin: 0 auto; }
+.heading { text-align: center; font-size: 1.8rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-10); }
+.table { width: 100%; border-collapse: collapse; }
+.th { padding: var(--space-4); text-align: center; font-size: 13px; font-weight: 700; color: var(--color-text-muted); border-bottom: 2px solid var(--color-border); }
+.th.highlight { color: var(--color-primary); }
+.td { padding: var(--space-4); text-align: center; font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); }
+.td.feature { text-align: left; color: var(--color-text); font-weight: 500; }
+.yes { color: var(--color-success); font-size: 18px; }
+.no { color: var(--color-danger); font-size: 18px; }
+.partial { color: var(--color-warning); font-size: 12px; }

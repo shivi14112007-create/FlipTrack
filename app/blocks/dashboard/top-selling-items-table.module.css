@@ -1,0 +1,11 @@
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-6); }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-5); }
+.title { font-size: 14px; font-weight: 700; color: var(--color-text); }
+.table { width: 100%; border-collapse: collapse; }
+.th { padding: var(--space-3) var(--space-4); text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-subtle); border-bottom: 1px solid var(--color-border); }
+.th.right { text-align: right; }
+.td { padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); }
+.td.right { text-align: right; }
+.td.profit { font-family: var(--family-mono); font-weight: 700; color: var(--color-success); text-align: right; }
+.link { color: var(--color-text); text-decoration: none; font-weight: 500; }
+.link:hover { color: var(--color-primary); }

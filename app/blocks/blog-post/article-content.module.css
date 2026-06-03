@@ -1,0 +1,7 @@
+.content { max-width: 720px; margin: 0 auto; padding: 0 var(--space-6) var(--space-10); }
+.content h2 { font-size: 1.4rem; font-weight: 700; color: var(--color-text); margin: var(--space-8) 0 var(--space-4); }
+.content h3 { font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin: var(--space-6) 0 var(--space-3); }
+.content p { font-size: 15px; color: var(--color-text-muted); line-height: 1.8; margin-bottom: var(--space-5); }
+.content ul, .content ol { padding-left: var(--space-6); margin-bottom: var(--space-5); }
+.content li { font-size: 15px; color: var(--color-text-muted); line-height: 1.8; margin-bottom: var(--space-2); }
+.content blockquote { border-left: 3px solid var(--color-primary); padding-left: var(--space-5); margin: var(--space-6) 0; color: var(--color-text-muted); font-style: italic; }

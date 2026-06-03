@@ -1,0 +1,14 @@
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; display: flex; align-items: center; justify-content: center; padding: var(--space-6); }
+.modal { background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); width: 100%; max-width: 480px; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-6); border-bottom: 1px solid var(--color-border); }
+.title { font-size: 16px; font-weight: 700; color: var(--color-text); }
+.closeBtn { background: none; border: none; cursor: pointer; color: var(--color-text-muted); }
+.body { padding: var(--space-6); }
+.field { margin-bottom: var(--space-4); }
+.label { display: block; font-size: 13px; font-weight: 600; color: var(--color-text-muted); margin-bottom: var(--space-2); }
+.input { width: 100%; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text); font-size: 14px; outline: none; }
+.input:focus { border-color: var(--color-primary); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.footer { display: flex; justify-content: flex-end; gap: var(--space-3); padding: var(--space-4) var(--space-6); border-top: 1px solid var(--color-border); }
+.cancelBtn { padding: 9px 18px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; background: none; border: 1px solid var(--color-border); color: var(--color-text-muted); cursor: pointer; }
+.saveBtn { padding: 9px 18px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; background: var(--color-primary); color: var(--color-text-inverse); border: none; cursor: pointer; }

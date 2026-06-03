@@ -1,0 +1,9 @@
+.bar { position: sticky; bottom: 0; background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-3) var(--space-5); display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4); box-shadow: var(--shadow-lg); }
+.count { font-size: 13px; font-weight: 600; color: var(--color-text); }
+.actions { display: flex; gap: var(--space-2); }
+.btn { padding: 6px 14px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--color-border); background: none; color: var(--color-text-muted); transition: all var(--transition-fast); }
+.btn:hover { background: var(--color-bg-hover); color: var(--color-text); }
+.btnDanger { border-color: var(--color-danger); color: var(--color-danger); }
+.btnDanger:hover { background: var(--color-danger-bg); }
+.clearBtn { margin-left: auto; padding: 6px 14px; border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text-subtle); cursor: pointer; border: none; background: none; }
+.clearBtn:hover { color: var(--color-text); }

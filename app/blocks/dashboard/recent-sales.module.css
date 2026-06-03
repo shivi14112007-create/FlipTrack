@@ -1,0 +1,12 @@
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-5); }
+.title { font-size: 14px; font-weight: 700; color: var(--color-text); }
+.viewAll { font-size: 13px; color: var(--color-primary); text-decoration: none; }
+.viewAll:hover { text-decoration: underline; }
+.table { width: 100%; border-collapse: collapse; }
+.th { padding: var(--space-3) var(--space-4); text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-subtle); border-bottom: 1px solid var(--color-border); }
+.td { padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); }
+.td:last-child { border-bottom: none; }
+.profitBadge { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; font-family: var(--family-mono); }
+.positive { background: var(--color-success-bg); color: var(--color-success); }
+.negative { background: var(--color-danger-bg); color: var(--color-danger); }

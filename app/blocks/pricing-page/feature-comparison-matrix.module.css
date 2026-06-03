@@ -1,0 +1,12 @@
+.section { padding: var(--space-16) var(--space-6); border-top: 1px solid var(--color-border); background: var(--color-bg-surface); }
+.inner { max-width: 900px; margin: 0 auto; }
+.heading { font-size: 1.5rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-8); text-align: center; }
+.table { width: 100%; border-collapse: collapse; }
+.th { padding: var(--space-4); text-align: center; font-size: 13px; font-weight: 700; color: var(--color-text-muted); border-bottom: 2px solid var(--color-border); }
+.th.active { color: var(--color-primary); }
+.td { padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); text-align: center; }
+.td.label { text-align: left; color: var(--color-text); }
+.category { background: var(--color-bg-elevated); }
+.categoryLabel { padding: var(--space-2) var(--space-4); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-subtle); }
+.yes { color: var(--color-success); }
+.no { color: var(--color-danger); }

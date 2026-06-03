@@ -1,0 +1,4 @@
+.section { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-8); }
+.btn { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-6); border-radius: var(--radius-md); font-size: 13px; font-weight: 600; cursor: pointer; transition: all var(--transition-fast); border: 1px solid var(--color-border); background: var(--color-bg-card); color: var(--color-text-muted); min-width: 120px; }
+.btn:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-glow); }
+.btnIcon { font-size: 1.5rem; }

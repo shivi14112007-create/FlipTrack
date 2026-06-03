@@ -1,0 +1,60 @@
+.section {
+  padding: var(--space-20) var(--space-6);
+  background: linear-gradient(135deg, rgba(0,255,136,0.05) 0%, rgba(124,58,237,0.05) 100%);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.heading {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.subtext {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  margin-bottom: var(--space-8);
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.footnote {
+  margin-top: var(--space-4);
+  font-size: 13px;
+  color: var(--color-text-subtle);
+}

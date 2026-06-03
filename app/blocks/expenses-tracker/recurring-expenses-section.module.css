@@ -1,0 +1,12 @@
+.section { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-6); }
+.title { font-size: 14px; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-5); }
+.items { display: flex; flex-direction: column; gap: var(--space-3); }
+.item { display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); background: var(--color-bg-elevated); border-radius: var(--radius-sm); }
+.left { }
+.desc { font-size: 14px; color: var(--color-text); font-weight: 500; }
+.day { font-size: 12px; color: var(--color-text-subtle); }
+.right { display: flex; align-items: center; gap: var(--space-4); }
+.amount { font-family: var(--family-mono); font-weight: 700; color: var(--color-text); }
+.toggle { cursor: pointer; accent-color: var(--color-primary); }
+.editBtn { padding: 4px 10px; border-radius: var(--radius-sm); font-size: 12px; border: 1px solid var(--color-border); background: none; color: var(--color-text-muted); cursor: pointer; }
+.editBtn:hover { background: var(--color-bg-hover); }

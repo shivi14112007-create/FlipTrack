@@ -1,0 +1,5 @@
+.message { text-align: center; }
+.icon { font-size: 3rem; margin-bottom: var(--space-4); }
+.heading { font-size: 1.3rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-3); }
+.desc { font-size: 14px; color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6); }
+.loginLink { display: inline-block; padding: 10px 20px; border-radius: var(--radius-md); background: var(--color-primary); color: var(--color-text-inverse); font-size: 14px; font-weight: 600; text-decoration: none; }

@@ -1,0 +1,9 @@
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); }
+.title { font-size: 14px; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-5); }
+.form { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: var(--space-2); min-width: 150px; flex: 1; }
+.label { font-size: 12px; font-weight: 600; color: var(--color-text-muted); }
+.input { padding: 9px 12px; border-radius: var(--radius-sm); background: var(--color-bg-elevated); border: 1px solid var(--color-border); color: var(--color-text); font-size: 13px; outline: none; }
+.input:focus { border-color: var(--color-primary); }
+.createBtn { padding: 9px 18px; border-radius: var(--radius-sm); background: var(--color-primary); color: var(--color-text-inverse); font-size: 13px; font-weight: 600; border: none; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+.createBtn:hover { background: var(--color-primary-dark); }
