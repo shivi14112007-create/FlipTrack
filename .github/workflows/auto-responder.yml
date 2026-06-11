@@ -1,0 +1,77 @@
+name: Auto-Responder Bot
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  auto-respond:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Respond to assignment requests
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = context.payload.comment;
+            const issue = context.payload.issue;
+            const repoOwner = context.repo.owner;
+            const commenter = comment.user.login;
+
+            // 1. Ignore comments on Pull Requests
+            if (issue.pull_request) {
+              console.log('Comment is on a PR, skipping.');
+              return;
+            }
+
+            // 2. Ignore comments from Bots
+            if (comment.user.type === 'Bot') {
+              console.log('Comment is from a Bot, skipping.');
+              return;
+            }
+
+            // 3. Ignore comments from the repository owner/maintainer
+            if (commenter === repoOwner) {
+              console.log('Comment is from the maintainer, skipping.');
+              return;
+            }
+
+            // 4. Check for keywords
+            const bodyLower = comment.body.toLowerCase();
+            const keywords = ['assign', 'work on this', 'can i take', 'gssoc', 'ecsoc'];
+            const hasKeyword = keywords.some(keyword => bodyLower.includes(keyword));
+
+            if (!hasKeyword) {
+              console.log('No assignment keywords found, skipping.');
+              return;
+            }
+
+            // 5. Check if the bot has already replied to this issue
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+            });
+
+            // Look for a comment from github-actions[bot] that contains our signature message
+            const botSignature = 'Thank you for your interest in contributing';
+            const hasReplied = comments.data.some(c => 
+              c.user.login === 'github-actions[bot]' && c.body.includes(botSignature)
+            );
+
+            if (hasReplied) {
+              console.log('Bot has already replied to this issue, skipping to prevent spam.');
+              return;
+            }
+
+            // 6. Post the response
+            const replyBody = `Hi @${commenter}! 👋\n\n${botSignature} to this repository! Please wait until a maintainer officially assigns you to this issue before opening a Pull Request. \n\nWe review requests regularly and will assign it as soon as possible if it's available. Happy coding! 🚀`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: replyBody
+            });
+            console.log('Successfully posted auto-response.');
