@@ -1,0 +1,22 @@
+name: Auto Label PRs
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+jobs:
+  label-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Add ECSoC26 Label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['ECSoC26']
+            })
