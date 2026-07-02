@@ -1,20 +1,32 @@
 import { mockSales } from "~/data/mock-data";
 import styles from "./report-preview.module.css";
 
-interface Props { className?: string; }
+interface SaleItem {
+  id: string;
+  date: string;
+  item: string;
+  salePrice: number;
+  profit: number;
+}
 
-export function ReportPreview({ className }: Props) {
-  const totalProceeds = mockSales.reduce((s, sale) => s + sale.salePrice, 0);
-  const totalGains = mockSales.reduce((s, sale) => s + sale.profit, 0);
+interface Props {
+  className?: string;
+  sales: SaleItem[];
+  year: number;
+}
+
+export function ReportPreview({ className, sales, year }: Props) {
+  const totalProceeds = sales.reduce((s, sale) => s + sale.salePrice, 0);
+  const totalGains = sales.reduce((s, sale) => s + sale.profit, 0);
 
   return (
     <div className={[styles.card, className].filter(Boolean).join(" ")}>
       <div className={styles.header}>
-        <div className={styles.title}>Preview — Tax Year 2024</div>
+        <div className={styles.title}>Preview — Tax Year {year}</div>
         <div className={styles.summaryRow}>
           <div className={styles.summaryCard}><div className={styles.summaryLabel}>Total Proceeds</div><div className={styles.summaryValue}>${totalProceeds.toLocaleString()}</div></div>
           <div className={styles.summaryCard}><div className={styles.summaryLabel}>Total Cost Basis</div><div className={styles.summaryValue}>${(totalProceeds - totalGains).toLocaleString()}</div></div>
-          <div className={styles.summaryCard}><div className={styles.summaryLabel}>Net Capital Gains</div><div className={[styles.summaryValue, styles.positive].join(" ")}>${totalGains.toLocaleString()}</div></div>
+          <div className={styles.summaryCard}><div className={styles.summaryLabel}>Net Capital Gains</div><div className={[styles.summaryValue, totalGains >= 0 ? styles.positive : styles.negative].join(" ")}>${totalGains.toLocaleString()}</div></div>
         </div>
       </div>
       <div className={styles.tableWrap}>
@@ -29,7 +41,13 @@ export function ReportPreview({ className }: Props) {
             </tr>
           </thead>
           <tbody>
-            {mockSales.map(s => (
+            {sales.length === 0 ? (
+              <tr>
+                <td colSpan={5} className={styles.td} style={{ textAlign: "center", padding: "2rem" }}>
+                  No sales logged for tax year {year}.
+                </td>
+              </tr>
+            ) : sales.map(s => (
               <tr key={s.id} className={styles.tr}>
                 <td className={styles.td}>{s.date}</td>
                 <td className={styles.td}>{s.item}</td>
