@@ -39,12 +39,14 @@
 }
 
 .logoImage {
-  height: 32px;
+  height: 28px;
   width: auto;
-  filter: grayscale(100%) opacity(80%) invert(1);
-  transition: filter 0.3s ease;
+  color: var(--color-text-subtle);
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 .logoImage:hover {
-  filter: grayscale(0%) opacity(100%);
+  color: var(--color-text);
+  opacity: 1;
 }
