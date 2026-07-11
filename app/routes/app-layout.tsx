@@ -1,6 +1,6 @@
 import { Outlet, redirect, useLoaderData } from "react-router";
 import { getSupabaseServerClient } from "~/utils/supabase.server";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"; 
 import type { Route } from "./+types/app-layout";
 import { AppSidebar } from "~/blocks/__global/app-sidebar";
 import { BreadcrumbNavigation } from "~/blocks/__global/breadcrumb-navigation";
