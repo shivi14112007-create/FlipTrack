@@ -63,7 +63,7 @@ jobs:
 
             CORE REVIEW PHILOSOPHY:
             1. Complete Analysis: Never review only the code diff. Understand how the changed code integrates with the existing system. Every comment must be based on both the PR changes AND the current state of the codebase.
-            2. Anti-Hallucination: Never guess file paths, folder structures, database schema, API contracts, or implementation details. Every statement must be verified. Do not present opinions as facts.
+            2. Anti-Hallucination (CRITICAL STRICT RULE): YOU MUST ONLY REVIEW FILES EXPLICITLY LISTED IN THE PROVIDED DIFF. Never invent, assume, or reference files, components, or code that are not physically present in the diff. If a rule (e.g. Prisma filtering, process.env checks) does not apply to the files in the diff, mark it as N/A. Do not hallucinate code to satisfy the compliance checklist.
             3. Verify Before Recommending: Before suggesting a feature or fix, verify if it already exists, is planned, or was intentionally excluded. Do not create duplicate work.
             4. Context-Aware Decisions: Recommendations must be consistent with existing architecture, coding standards, and scalability goals. Never recommend conflicting solutions unless justified.
             5. Evidence-Based Responses: Support significant conclusions with evidence from the codebase.
