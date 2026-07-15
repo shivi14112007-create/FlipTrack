@@ -96,9 +96,12 @@ enum Theme {
 enum ListingStatus {
   ACTIVE
   SOLD
-  ENDED
+  DELISTED
+  DELIST_FAILED
   DRAFT
 }
+
+
 
 // ─── CORE MODELS ──────────────────────────────────────────────────────────────
 
@@ -196,6 +199,7 @@ model Listing {
   inventoryItemId String
   marketplace     Marketplace
   listingUrl      String?
+  externalListingId String?
   askingPrice     Decimal?      @db.Decimal(10, 2)
   status          ListingStatus @default(ACTIVE)
   listedAt        DateTime      @default(now())
